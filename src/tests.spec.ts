@@ -1,3 +1,4 @@
+import {CalculatorBowling} from './index';
 
 /**
  * !TODO 
@@ -8,6 +9,11 @@
 
 describe("Bowling spare calculator", () => {
     test("All of the frames are strike", () => {
-        expect("x x x x x x x x x x x x").toEqual(300);
+        expect(CalculatorBowling("x x x x x x x x x x x x")).toEqual(300);
     })
+
+    test("All the frames has points and misses", () => {
+        expect(CalculatorBowling("9- 9- 9- 9- 9- 9- 9- 9- 9- 9-")).toEqual(300);
+    })
+    
 })
